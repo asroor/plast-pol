@@ -1,0 +1,10 @@
+{
+	"devDependencies": {
+		"gulp": "^5.0.0",
+		"gulp-sass": "^5.1.0",
+		"sass": "^1.75.0",
+		"gulp-autoprefixer": "^9.0.0",
+		"gulp-purgecss": "^6.0.0",
+		"typescript": "^5.4.5"
+	}
+}
