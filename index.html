@@ -344,7 +344,11 @@
 
 
 		<!-- Model start -->
-		<section id="model"></section>
+		<section id="model">
+			<div class="container">
+				<div class="model-wrap"></div>
+			</div>
+		</section>
 		<!-- Model end -->
 	</div>
 	<!-- <script src="libs/swiper.js"></script> -->
@@ -352,11 +356,12 @@
 		const tabContainer = document.querySelector("#homeTabs");
 		const navList = document.querySelectorAll(".tabs-menu .tab-card");
 		const tabList = document.querySelectorAll(".tab-content");
-
+		tabsLoop: true
 		for (let i = 0; i < navList.length; i++) {
 			navList[i].addEventListener('click', (evt) => {
 				let currentLink = document.querySelector(".tab-card.active");
 				let currentTab = document.querySelector(".tab-content.active");
+				tabsLoop: false
 
 				currentLink.classList.remove("active");
 				navList[i].classList.add("active");
@@ -365,6 +370,19 @@
 				tabList[i].classList.add("active");
 			})
 		}
+		setInterval(() => {
+			for (let i = 0; i < navList.length; i++) {
+				if (navList[i].classList.contains("active")) {
+					navList[i].classList.remove("active");
+					tabList[i].classList.remove("active");
+
+					let nextIndex = (i + 1) % navList.length;
+					navList[nextIndex].classList.add("active");
+					tabList[nextIndex].classList.add("active");
+					break;
+				}
+			}
+		}, 10000);
 	</script>
 </body>
 
