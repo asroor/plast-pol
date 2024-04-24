@@ -1,5 +1,6 @@
 @import '../fonts/BebasNeue/stylesheet.css';
 @import '../fonts/SourceSansPro/stylesheet.css';
+@import '../fonts/Montserrat/stylesheet.css';
 :root {
   --bs-orange: #FF712C;
   --bs-black: #212123;
@@ -2300,7 +2301,7 @@ consult start
   padding-top: 50px;
   background: url(../img/consult-bg.svg) no-repeat;
   background-size: contain;
-  background-position: bottom;
+  background-position: bottom center;
   padding-bottom: 20px;
 }
 
@@ -2489,4 +2490,107 @@ contact start
 .def-consult {
   padding-top: 150px;
   background-position: top;
+  background-size: cover;
+}
+
+/**
+===============================
+Montages start
+===============================
+**/
+#montages {
+  padding-top: 50px;
+  background-image: url("../img/main-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+.montages-cards .montage-card {
+  border-radius: 25px;
+  background: #FFF;
+  box-shadow: 0px 176px 70px 0px rgba(59, 61, 78, 0.01), 0px 99px 59px 0px rgba(59, 61, 78, 0.05), 0px 44px 44px 0px rgba(59, 61, 78, 0.09), 0px 11px 24px 0px rgba(59, 61, 78, 0.1);
+}
+
+.montage-card .card-top,
+.montage-card .card-bottom {
+  padding: 10px;
+}
+.montage-card .card-top .card-top__wrap,
+.montage-card .card-top .card-bottom__wrap,
+.montage-card .card-bottom .card-top__wrap,
+.montage-card .card-bottom .card-bottom__wrap {
+  padding: 15px 40px;
+}
+.montage-card .card-top {
+  padding-bottom: 0;
+}
+.montage-card .card-top h4 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+.montage-card .card-top h4:last-child {
+  margin-top: 17px;
+}
+.montage-card .card-top h4:not(.orange-txt) {
+  color: #3C3950;
+}
+.montage-card .card-bottom {
+  padding-top: 0;
+}
+.montage-card .card-bottom p {
+  color: #5F727F;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.card-top__wrap {
+  border: 1px dashed #DDE0E6;
+  border-bottom: none;
+  padding-top: 0;
+  border-radius: 16px 16px 0 0;
+}
+
+.card-bottom__wrap {
+  border: 1px dashed #DDE0E6;
+  border-top: none;
+  padding-top: 0;
+  border-radius: 0 0 16px 16px;
+}
+
+.montages-pagination {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 23px;
+  list-style: none;
+}
+.montages-pagination li {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  padding: 0px 6.66px 0px 6.8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  color: #000;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.montages-pagination li:not(.page-next):not(.page-more) {
+  border-radius: 10px;
+  border: 1px solid #D9D9D9;
+}
+.montages-pagination li.active-page {
+  background-color: var(--bs-orange);
+  border-color: var(--bs-orange);
+  color: #FFF;
 }
