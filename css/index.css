@@ -84,6 +84,13 @@ button {
 .title img.title-wave {
   width: 74px;
 }
+.title p.title-txt {
+  color: #5F727F;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
 
 .orange-txt {
   color: var(--bs-orange);
@@ -109,6 +116,26 @@ p.section-text:not(:last-child) {
   border-radius: 16px;
   border: 1px dashed #DDE0E6;
   padding: 10px;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  column-gap: 10px;
+}
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+}
+.breadcrumb li a {
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+.breadcrumb li:last-child a {
+  color: var(--bs-orange);
 }
 
 .row {
@@ -2166,4 +2193,300 @@ footer {
   display: block;
   width: 32px;
   height: 32px;
+}
+
+/**
+===========================
+About page
+===========================
+**/
+#about {
+  padding: 50px 0;
+  background: url(../img/about-bg.svg) no-repeat, url(../img/def-bg.png) no-repeat;
+  background-size: contain, contain;
+  background-position: 0 109%, top;
+}
+
+.about-title {
+  margin-top: 60px;
+  margin-bottom: 67px;
+}
+
+.about-series {
+  margin-top: 70px;
+  margin-bottom: 100px;
+}
+
+.about-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.about-item .item-icon {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  border-radius: 50px;
+  border: 2px solid var(--bs-orange);
+  padding: 5px;
+}
+.about-item .item-icon div {
+  background: rgba(217, 217, 217, 0.2);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  justify-content: center;
+}
+.about-item p {
+  color: #000;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+#cases {
+  padding-top: 20px;
+  background-color: rgba(248, 250, 253, 0.6823529412);
+}
+
+.cases-title__series li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.cases-title__series li {
+  color: #5F727F;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  list-style: url(../img/icons/list-style.svg);
+  padding-left: 6px;
+}
+
+.cases-cards {
+  margin-top: 40px;
+}
+.cases-cards .cases-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.cases-cards .cases-card img {
+  border-radius: 70px;
+  border: 2px solid var(--bs-orange);
+  width: 140px;
+  height: 140px;
+  flex-shrink: 0;
+}
+.cases-cards .cases-card p {
+  color: #5F727F;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  max-width: 339.25px;
+}
+.cases-cards .cases-card b {
+  font-weight: 700;
+}
+
+/**
+============================
+consult start
+============================
+**/
+.consult {
+  padding-top: 50px;
+  background: url(../img/consult-bg.svg) no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  padding-bottom: 20px;
+}
+
+.consult-cards .item {
+  width: 100%;
+}
+.consult-cards .item h1,
+.consult-cards .item h5 {
+  color: var(--bs-orange);
+  text-align: center;
+  font-family: var(--font-BebasNeue);
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 64px;
+}
+.consult-cards .item h5 {
+  font-family: var(--font---font-SourceSansPro);
+  font-size: 20px;
+  font-weight: 700;
+}
+.consult-cards .item hr {
+  height: 1px;
+  border-width: 0;
+  background-color: #EBEBEB;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+.consult-cards .item p {
+  max-width: 231.52px;
+  margin: 0 auto;
+  color: #000;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.about__contact {
+  margin-top: 10px;
+}
+.about__contact h1 {
+  text-align: center;
+  font-family: var(--font-BebasNeue);
+  font-size: 52px;
+  font-weight: 400;
+  line-height: 57.2px;
+}
+.about__contact p {
+  color: #000;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  max-width: 483px;
+  margin: 0 auto;
+}
+
+.about__contact-card {
+  margin-top: 16px;
+}
+.about__contact-card .about__contact-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+}
+
+.card-content__left {
+  max-width: 311px;
+}
+.card-content__left h1 {
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 25.96px;
+  text-transform: uppercase;
+}
+.card-content__left h1 p {
+  color: #4D5561;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.card-content__right {
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+}
+.card-content__right input {
+  width: 215.69px;
+  padding: 21px;
+  border-radius: 200px;
+  background: #EFF2F6;
+  border: none;
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+}
+.card-content__right input::placeholder {
+  color: #757575;
+  text-align: center;
+}
+.card-content__right button {
+  color: #FFF;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  text-transform: uppercase;
+  border-radius: 200px;
+  background-color: var(--bs-orange);
+  border: none;
+  padding: 17.45px 31.99px 17.55px 31.62px;
+}
+
+/**
+==========================
+contact start
+==========================
+**/
+#contact {
+  padding-top: 50px;
+  background: url(../img/def-bg.png) no-repeat;
+  background-position: top;
+  background-size: 100%;
+}
+
+.contact-cards {
+  margin-top: 125px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  transform: translateY(30px);
+}
+
+.contact-cards__item {
+  width: 100%;
+  max-width: 200.41px;
+}
+.contact-cards__item .item-top__icon {
+  border-radius: 80px;
+  border: 2px dashed #DDE0E6;
+  display: flex;
+  width: 160px;
+  height: 160px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.contact-cards__item h3 {
+  color: #000;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22px;
+  margin-bottom: 20px;
+}
+.contact-cards__item h3 p {
+  font-size: 14px;
+  font-weight: 400;
+  display: inline;
+}
+.contact-cards__item b {
+  color: #000;
+  text-align: center;
+  display: block;
+  font-size: 12.141px;
+  font-weight: 700;
+  line-height: 22px;
+}
+.contact-cards__item p {
+  color: #000;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+.contact-cards__item p span.bold-txt {
+  font-weight: 700;
+}
+
+.def-consult {
+  padding-top: 150px;
+  background-position: top;
 }
