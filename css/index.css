@@ -1,4 +1,5 @@
 @import '../fonts/BebasNeue/stylesheet.css';
+@import '../fonts/SourceSansPro/stylesheet.css';
 :root {
   --bs-orange: #FF712C;
   --bs-black: #212123;
@@ -14,6 +15,7 @@
   --bs-breakpoint-xxl: 1400px;
   --font-BebasNeue: "Bebas Neue", sans-serif;
   --font-Montserrat: Montserrat, sans-serif;
+  --font-SourceSansPro: "Source Sans Pro", sans-serif;
 }
 
 *,
@@ -1874,6 +1876,7 @@ certificate start
 }
 .youtube-card iframe {
   height: 640px;
+  border-radius: 25px;
 }
 
 .grid-card {
@@ -1992,4 +1995,175 @@ certificate start
   border-radius: 85px;
   background-color: var(--bs-orange);
   padding: 0px 19.672px 0px 20px;
+}
+
+/*
+================================
+Commit start
+================================
+*/
+#commit {
+  position: relative;
+  margin-top: 60px;
+}
+
+.commit-card {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.commit-card .commit-card__wrap {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 38px;
+  padding: 30px;
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  display: none;
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  display: none;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  top: 200px;
+}
+
+.swiper-button-prev {
+  left: -25px;
+}
+
+.swiper-button-next {
+  right: -25px;
+}
+
+.commit-card__img {
+  border-radius: 100%;
+  overflow: hidden;
+  width: 240px;
+  height: 240px;
+  flex-shrink: 0;
+}
+.commit-card__img img {
+  object-fit: cover;
+}
+
+.commit-card__about h1,
+.commit-card__about h3,
+.commit-card__about sub {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+.commit-card__about h3 {
+  font-weight: 400;
+}
+.commit-card__about sub {
+  display: block;
+  letter-spacing: 4px;
+  transform: translateY(-10px);
+}
+.commit-card__about p {
+  color: #000;
+  font-family: var(--font---font-SourceSansPro);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 23.4px;
+}
+
+/**
+==============================
+Footer start
+==============================
+**/
+footer {
+  padding: 45px 0;
+  border-top: 1px solid #313646;
+  background: #4D5561;
+}
+
+.footer-series {
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 60px;
+  border-bottom: 1px dashed #D8DBE0;
+}
+.footer-series .series-item {
+  width: 33.3333333333%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 40px;
+}
+.footer-series .series-item .footer-call {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  border: 2px solid #EFF2F6;
+  width: 40px;
+  height: 40px;
+}
+.footer-series .series-item:not(:first-child) {
+  border-left: 1px solid rgba(217, 217, 217, 0.6);
+  padding-left: 40px;
+}
+.footer-series .series-item h3,
+.footer-series .series-item .item-link,
+.footer-series .series-item h5 {
+  display: block;
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+.footer-series .series-item h3 {
+  font-weight: 700;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+.footer-bottom h5 {
+  color: #FFF;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.footer-bottom__link {
+  max-width: 562.9px;
+}
+.footer-bottom__link div {
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+  margin-bottom: 5px;
+}
+.footer-bottom__link a,
+.footer-bottom__link p {
+  color: #FFF;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 13px;
+}
+
+.footer-bottom__network {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+.footer-bottom__network a {
+  display: block;
+  width: 32px;
+  height: 32px;
 }
