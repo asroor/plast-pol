@@ -91,6 +91,10 @@ button {
 	color: var(--bs-orange);
 }
 
+.black-txt {
+	color: var(--bs-black);
+}
+
 p.section-text {
 	color: black;
 	font-size: 14px;
@@ -138,4 +142,14 @@ p.section-text {
 			}
 		}
 	}
+}
+
+.arrow-line {
+	margin-top: 35px;
+	display: block;
+	width: 100%;
+	height: 10px;
+	background-image: url('../img/icons/arrow-line.svg');
+	background-size: contain;
+	background-repeat: repeat-x;
 }

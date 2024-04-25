@@ -97,6 +97,10 @@ button {
   color: var(--bs-orange);
 }
 
+.black-txt {
+  color: var(--bs-black);
+}
+
 p.section-text {
   color: black;
   font-size: 14px;
@@ -137,6 +141,16 @@ p.section-text:not(:last-child) {
 }
 .breadcrumb li:last-child a {
   color: var(--bs-orange);
+}
+
+.arrow-line {
+  margin-top: 35px;
+  display: block;
+  width: 100%;
+  height: 10px;
+  background-image: url("../img/icons/arrow-line.svg");
+  background-size: contain;
+  background-repeat: repeat-x;
 }
 
 .row {
@@ -2593,4 +2607,196 @@ Montages start
   background-color: var(--bs-orange);
   border-color: var(--bs-orange);
   color: #FFF;
+}
+
+/*
+===================================
+	Aksiya start
+===================================
+*/
+#aksiya {
+  padding-top: 50px;
+  background-image: url("../img/bg-default.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+.aksiya-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 55px;
+  margin-top: 66px;
+}
+.aksiya-head ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.aksiya-head ul li,
+.aksiya-head ul li > a:not(.orange-txt) {
+  color: #99A9B5;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+.aksiya-head ul li:not(:last-child) {
+  padding-right: 10px;
+  margin-right: 10px;
+  border-right: 1px solid #D4DEE1;
+}
+
+.aksiya-posts > .post-item:not(:last-child) {
+  margin-bottom: 22px;
+}
+
+.post-item h2 {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 38px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.post-item .post-img {
+  margin: 15px 0;
+  width: 100%;
+}
+.post-item .post-img img {
+  object-fit: contain;
+}
+.post-item > * > * > *:last-child {
+  margin-bottom: 0;
+}
+.post-item i {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  margin-bottom: 15px;
+  display: block;
+}
+.post-item h3 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+.post-item .post-card img {
+  width: 100%;
+  max-width: 150px;
+}
+.post-item .post-card h2 {
+  margin: 15px 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+.post-item:not(:last-child) {
+  margin-bottom: 65px;
+}
+
+.post-item-last {
+  margin-top: 65px;
+}
+.post-item-last h3 {
+  font-size: 14px;
+  font-weight: 400;
+}
+.post-item-last ul {
+  margin: 15px 0;
+  padding-left: 50px;
+}
+.post-item-last ul li {
+  color: #FF712C;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+.post-item-last ul li:not(:last-child) {
+  margin-bottom: 6px;
+}
+.post-item-last ul li::marker {
+  color: var(--bs-black);
+}
+.post-item-last h4 {
+  color: #5F727F;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.aksiya-cards {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.aksiya-cards h4 {
+  color: #3C3950;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+.aksiya-cards .aksiya__card img {
+  height: 175px;
+}
+.aksiya-cards .aksiya__card h4 {
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+  margin-top: 15px;
+}
+
+.networks {
+  display: flex;
+  align-items: center;
+  column-gap: 13px;
+}
+.networks a {
+  display: block;
+}
+
+.avtor {
+  margin-top: 90px;
+  background-color: #F4F6F7;
+  padding: 40px;
+  display: flex;
+  align-items: flex-start;
+  column-gap: 35px;
+}
+
+.avtor__about .avtor__about-head {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+.avtor__about .avtor__about-head h3,
+.avtor__about .avtor__about-head h4 {
+  margin: 0;
+  color: #212123;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0.95px;
+  text-transform: uppercase;
+}
+.avtor__about .avtor__about-head h4 {
+  font-size: 17.664px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.avtor__about h5 {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+.avtor__about h5 span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
 }

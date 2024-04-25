@@ -1574,3 +1574,232 @@ Montages start
 		color: #FFF;
 	}
 }
+
+/*
+===================================
+	Aksiya start
+===================================
+*/
+
+#aksiya {
+	padding-top: 50px;
+	background-image: url('../img/bg-default.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+}
+
+.aksiya-head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 55px;
+	margin-top: 66px;
+
+	ul {
+		list-style: none;
+		display: flex;
+		align-items: center;
+
+		li,
+		li>a:not(.orange-txt) {
+			color: #99A9B5;
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 22px;
+		}
+
+		li:not(:last-child) {
+			padding-right: 10px;
+			margin-right: 10px;
+			border-right: 1px solid #D4DEE1;
+		}
+	}
+}
+
+.aksiya-posts {
+	&>.post-item:not(:last-child) {
+		margin-bottom: 22px;
+	}
+}
+
+.post-item {
+	h2 {
+		display: block;
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 38px;
+		letter-spacing: 1.2px;
+		text-transform: uppercase;
+		margin-bottom: 24px;
+	}
+
+	.post-img {
+		margin: 15px 0;
+		width: 100%;
+
+		img {
+			object-fit: contain;
+		}
+	}
+
+	&>*>*>*:last-child {
+		margin-bottom: 0;
+	}
+
+	i {
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 22px;
+		margin-bottom: 15px;
+		display: block;
+	}
+
+	h3 {
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 22px;
+	}
+
+	.post-card {
+		img {
+			width: 100%;
+			max-width: 150px;
+		}
+
+		h2 {
+			margin: 15px 0;
+			font-size: 16px;
+			font-weight: 700;
+			line-height: 25px;
+			letter-spacing: 0.8px;
+			text-transform: uppercase;
+		}
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 65px;
+	}
+}
+
+.post-item-last {
+	margin-top: 65px;
+
+	h3 {
+		font-size: 14px;
+		font-weight: 400;
+	}
+
+	ul {
+		margin: 15px 0;
+		padding-left: 50px;
+
+		li {
+			color: #FF712C;
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 22px;
+
+			&:not(:last-child) {
+				margin-bottom: 6px;
+			}
+
+			&::marker {
+				color: var(--bs-black);
+			}
+		}
+	}
+
+	h4 {
+		color: #5F727F;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 22px;
+	}
+}
+
+
+.aksiya-cards {
+	margin-top: 30px;
+	margin-bottom: 50px;
+
+	h4 {
+		color: #3C3950;
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 25px;
+		letter-spacing: 0.8px;
+		text-transform: uppercase;
+		margin-bottom: 50px;
+	}
+
+	.aksiya__card {
+		img {
+			height: 175px;
+		}
+
+		h4 {
+			color: #333;
+			font-size: 16px;
+			font-weight: 700;
+			margin: 0;
+			margin-top: 15px;
+		}
+	}
+}
+
+.networks {
+	display: flex;
+	align-items: center;
+	column-gap: 13px;
+
+	a {
+		display: block;
+	}
+}
+
+.avtor {
+	margin-top: 90px;
+	background-color: #F4F6F7;
+	padding: 40px;
+	display: flex;
+	align-items: flex-start;
+	column-gap: 35px;
+}
+
+.avtor__about {
+	.avtor__about-head {
+		display: flex;
+		align-items: center;
+		column-gap: 5px;
+
+		h3,
+		h4 {
+			margin: 0;
+			color: #212123;
+			font-size: 19px;
+			font-weight: 700;
+			line-height: 30px;
+			letter-spacing: 0.95px;
+			text-transform: uppercase;
+		}
+
+		h4 {
+			font-size: 17.664px;
+			font-weight: 400;
+			text-transform: capitalize;
+		}
+	}
+
+	h5 {
+		margin-top: 20px;
+		display: flex;
+		align-items: center;
+
+		span {
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 22px;
+		}
+	}
+}
