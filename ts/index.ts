@@ -14,3 +14,5 @@ closeBtn.addEventListener('click', () => {
 	header__nav.classList.remove('active')
 	closeBg.classList.remove('active')
 })
+
+

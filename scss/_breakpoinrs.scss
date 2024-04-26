@@ -206,3 +206,64 @@ p.section-text {
 	visibility: visible;
 	opacity: 1;
 }
+
+
+
+.slideshow-container {
+	position: relative;
+}
+
+.commit-slide {
+	display: none;
+}
+
+.prev,
+.next {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 45px;
+	height: 45px;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+	background-color: white;
+	border-radius: 100%;
+
+	img {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.next {
+	right: -25px;
+
+	@include max-bp(770px) {
+		right: -12px;
+	}
+}
+
+.prev {
+	left: -25px;
+
+	@include max-bp(770px) {
+		left: -12px;
+	}
+}
+
+.fade {
+	animation-name: fade;
+	animation-duration: .3s;
+}
+
+@keyframes fade {
+	from {
+		opacity: 0.4;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
