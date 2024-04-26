@@ -97,6 +97,11 @@ button {
 		font-style: normal;
 		font-weight: 400;
 		line-height: 35.2px;
+
+		@include max-bp(768px) {
+			font-size: 20px;
+			line-height: 110%;
+		}
 	}
 
 	img.title-wave {

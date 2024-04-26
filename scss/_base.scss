@@ -1626,9 +1626,12 @@ contact start
 
 #contact {
 	padding-top: 50px;
-	background: url(../img/def-bg.png) no-repeat;
+	background: url(../img/bg-default.png) no-repeat;
 	background-position: top;
-	background-size: 100%;
+	background-size: cover;
+	@include max-bp(1050px) {
+		background-size: contain;
+	}
 }
 
 .contact-cards {
@@ -1640,11 +1643,43 @@ contact start
 	justify-content: center;
 	gap: 40px;
 	transform: translateY(30px);
+@include max-bp(1050px) {
+		flex-wrap: wrap;
+	}
+
+	@include max-bp(1050px) {
+		gap: 20px;
+	}
+
+	@include max-bp(768px) {
+		gap: 10px;
+	}
+	@include max-bp(450px) {
+		gap: 0;
+		row-gap: 20px;
+	}
 }
 
 .contact-cards__item {
 	width: 100%;
 	max-width: 200.41px;
+
+	@include max-bp(1050px) {
+		max-width: calc(100% / 3 - 27px);
+	}
+
+	@include max-bp(1050px) {
+		max-width: calc(100% / 3 - 14px);
+	}
+	@include max-bp(768px) {
+		max-width: calc(100% / 3 - 7px);
+	}
+	@include max-bp(600px) {
+		max-width: calc(100% / 2 - 5px);
+	}
+	@include max-bp(450px) {
+		max-width: 100%;
+	}
 
 	.item-top__icon {
 
@@ -1666,7 +1701,9 @@ contact start
 		font-weight: 700;
 		line-height: 22px;
 		margin-bottom: 20px;
-
+		@include max-bp(768px) {
+			margin-bottom: 10px;
+		}
 		p {
 			font-size: 14px;
 			font-weight: 400;

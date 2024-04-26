@@ -4,7 +4,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Contact</title>
+	<title>Контакты</title>
+	<link rel="icon" href="img/icons/logo.svg">
 	<!-- Monserrat -->
 	<link rel="stylesheet" href="fonts/Montserrat/stylesheet.css">
 	<link rel="stylesheet" href="css/index.css">
@@ -12,6 +13,7 @@
 
 <body>
 	<div class="wrapper">
+		<div class="close-bg"></div>
 		<!-- Header start -->
 		<header>
 			<div class="container">
@@ -20,15 +22,30 @@
 						<img src="img/icons/logo.svg" alt="logo.svg" width="100%" height="100%">
 					</a>
 					<nav class="header__nav">
+						<div class="menu-head">
+							<h1 class="orange-txt">Пласт - пол</h1>
+							<button type="button" class="close-btn">
+								<img src="img/icons/x-icon.svg" alt="close svg" width="100%" height="100%">
+							</button>
+						</div>
 						<ul class="nav-link">
-							<li class="nav-link__item"><a href="">О нас</a></li>
+							<li class="nav-link__item"><a href="about.html">О нас</a></li>
 							<li class="nav-link__item"><a href="">«СЕЛЛАР БАЗОВЫЙ»</a></li>
 							<li class="nav-link__item"><a href="">«СЕЛЛАР ПЛЮС»</a></li>
 							<li class="nav-link__item"><a href="">«АМБАР»</a></li>
-							<li class="nav-link__item"><a href="">Акция</a></li>
-							<li class="nav-link__item"><a href="">Монтаж</a></li>
-							<li class="nav-link__item"><a href="">Контакты</a></li>
+							<li class="nav-link__item"><a href="aksiya.html">Акция</a></li>
+							<li class="nav-link__item"><a href="montages.html">Монтаж</a></li>
+							<li class="nav-link__item"><a href="contact.html">Контакты</a></li>
 						</ul>
+						<div class="header-contact">
+							<button class="header__search-btn" type="button">
+								<img src="img/icons/lupa.svg" alt="search-icon">
+							</button>
+							<button class="header__call-btn" type="button">
+								<img src="img/icons/phone.svg" alt="phone-icon">
+							</button>
+							<a class="header-contact__num" href="tel:84959985918">8 495 998 59 18</a>
+						</div>
 					</nav>
 					<div class="header-contact">
 						<button class="header__search-btn" type="button">
@@ -38,6 +55,9 @@
 							<img src="img/icons/phone.svg" alt="phone-icon">
 						</button>
 						<a class="header-contact__num" href="tel:84959985918">8 495 998 59 18</a>
+						<div class="menu-btn">
+							<img src="img/icons/menu.svg" alt="menu" width="100%" height="100%">
+						</div>
 					</div>
 				</div>
 			</div>
@@ -52,11 +72,11 @@
 						<li>
 							<img src="img/icons/right-arrow.svg">
 						</li>
-						<li><a href="">О компании </a></li>
+						<li><a href="">Контакты</a></li>
 					</ul>
 					<div class="title about-title">
 						<h1 class="title-text">
-							О компании
+							Контакты
 						</h1>
 						<img src="img/icons/wave.svg" alt="wave icon" class="title-wave">
 						<h3 class="title-small">Компания Cellar cпециализируется на производстве изделий
@@ -206,6 +226,8 @@
 		</footer>
 		<!-- footer end -->
 	</div>
+
+	<script src="js/index.js"></script>
 </body>
 
 </html>
