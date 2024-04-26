@@ -1629,6 +1629,7 @@ contact start
 	background: url(../img/bg-default.png) no-repeat;
 	background-position: top;
 	background-size: cover;
+
 	@include max-bp(1050px) {
 		background-size: contain;
 	}
@@ -1643,7 +1644,8 @@ contact start
 	justify-content: center;
 	gap: 40px;
 	transform: translateY(30px);
-@include max-bp(1050px) {
+
+	@include max-bp(1050px) {
 		flex-wrap: wrap;
 	}
 
@@ -1654,6 +1656,7 @@ contact start
 	@include max-bp(768px) {
 		gap: 10px;
 	}
+
 	@include max-bp(450px) {
 		gap: 0;
 		row-gap: 20px;
@@ -1671,12 +1674,15 @@ contact start
 	@include max-bp(1050px) {
 		max-width: calc(100% / 3 - 14px);
 	}
+
 	@include max-bp(768px) {
 		max-width: calc(100% / 3 - 7px);
 	}
+
 	@include max-bp(600px) {
 		max-width: calc(100% / 2 - 5px);
 	}
+
 	@include max-bp(450px) {
 		max-width: 100%;
 	}
@@ -1701,9 +1707,11 @@ contact start
 		font-weight: 700;
 		line-height: 22px;
 		margin-bottom: 20px;
+
 		@include max-bp(768px) {
 			margin-bottom: 10px;
 		}
+
 		p {
 			font-size: 14px;
 			font-weight: 400;
@@ -1770,6 +1778,10 @@ Montages start
 		.card-top__wrap,
 		.card-bottom__wrap {
 			padding: 15px 40px;
+
+			@include max-bp(1199px) {
+				padding: 10px;
+			}
 		}
 	}
 
@@ -1777,7 +1789,6 @@ Montages start
 		padding-bottom: 0;
 
 		h4 {
-
 			font-size: 16px;
 			font-weight: 700;
 			line-height: 24px;
@@ -1786,7 +1797,13 @@ Montages start
 
 			&:last-child {
 				margin-top: 17px;
+
+				@include max-bp(650px) {
+					margin-top: 7px;
+					font-size: 16px;
+				}
 			}
+
 
 			&:not(.orange-txt) {
 				color: #3C3950;
@@ -1802,6 +1819,11 @@ Montages start
 			font-size: 14px;
 			font-weight: 400;
 			line-height: 22px;
+			overflow: hidden;
+			display: -webkit-box;
+			-webkit-line-clamp: 5;
+			line-clamp: 5;
+			-webkit-box-orient: vertical;
 		}
 
 	}
@@ -1828,6 +1850,10 @@ Montages start
 	justify-content: center;
 	column-gap: 23px;
 	list-style: none;
+
+	@include max-bp(768px) {
+		margin-top: 50px;
+	}
 
 	li {
 		cursor: pointer;

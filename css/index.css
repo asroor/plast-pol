@@ -2917,6 +2917,14 @@ Montages start
 .montage-card .card-bottom .card-bottom__wrap {
   padding: 15px 40px;
 }
+@media (max-width: 1199px) {
+  .montage-card .card-top .card-top__wrap,
+  .montage-card .card-top .card-bottom__wrap,
+  .montage-card .card-bottom .card-top__wrap,
+  .montage-card .card-bottom .card-bottom__wrap {
+    padding: 10px;
+  }
+}
 .montage-card .card-top {
   padding-bottom: 0;
 }
@@ -2930,6 +2938,12 @@ Montages start
 .montage-card .card-top h4:last-child {
   margin-top: 17px;
 }
+@media (max-width: 650px) {
+  .montage-card .card-top h4:last-child {
+    margin-top: 7px;
+    font-size: 16px;
+  }
+}
 .montage-card .card-top h4:not(.orange-txt) {
   color: #3C3950;
 }
@@ -2941,6 +2955,11 @@ Montages start
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  -webkit-box-orient: vertical;
 }
 
 .card-top__wrap {
@@ -2964,6 +2983,11 @@ Montages start
   justify-content: center;
   column-gap: 23px;
   list-style: none;
+}
+@media (max-width: 768px) {
+  .montages-pagination {
+    margin-top: 50px;
+  }
 }
 .montages-pagination li {
   cursor: pointer;
