@@ -2281,6 +2281,10 @@ features start
 		font-size: 14px;
 		font-weight: 400;
 		line-height: 22px;
+
+		@include max-bp(575px) {
+			max-width: 100%;
+		}
 	}
 
 	.item__top {
@@ -2322,11 +2326,51 @@ features start
 	align-items: flex-start;
 	gap: 50px;
 	flex-wrap: wrap;
+	border: 1px solid red;
+
+	@include max-bp(1199px) {
+		flex-wrap: wrap;
+	}
+
+	@include max-bp(600px) {
+		gap: 20px;
+	}
+
+	@include max-bp(450px) {
+		flex-direction: column;
+	}
 }
 
 .scheme-cards__item {
 	width: 100%;
 	max-width: calc(100% / 5 - 40px);
+
+	@include max-bp(1199px) {
+		max-width: calc(100% / 4 - 38px);
+	}
+
+	@include max-bp(1050px) {
+		max-width: calc(100% / 3 - 34px);
+	}
+
+	@include max-bp(767px) {
+		max-width: calc(100% / 2 - 25px);
+	}
+
+	@include max-bp(600px) {
+		max-width: calc(100% / 2 - 11px);
+	}
+
+	@include max-bp(450px) {
+		max-width: 100%;
+		;
+
+		.item__top {
+			margin: 0 auto;
+		}
+
+		text-align: center;
+	}
 
 	.item__top {
 		position: relative;
@@ -2356,14 +2400,63 @@ features start
 			top: 50%;
 			transform: translateY(-50%);
 			left: -45px;
+
+			@include max-bp(1199px) {
+				left: -50px;
+			}
 		}
 
 	}
 
-	&:first-child,
+
+	&:first-child {
+		img.step-arrow-img {
+			display: none;
+		}
+	}
+
 	&:nth-child(6) {
 		img.step-arrow-img {
 			display: none;
+
+			@include max-bp(1199px) {
+				display: block;
+			}
+		}
+	}
+
+	&:nth-child(4),
+	&:nth-child(7),
+	&:nth-child(10) {
+		img.step-arrow-img {
+			display: none;
+
+			@include max-bp(1050px) {
+				display: none;
+			}
+		}
+	}
+
+	&:nth-child(5),
+	&:nth-child(9) {
+		@include max-bp(1199px) {
+			img.step-arrow-img {
+				display: none;
+			}
+		}
+
+		@include max-bp(1050px) {
+			img.step-arrow-img {
+				display: block;
+			}
+		}
+	}
+
+	@include max-bp(767px) {
+		& {
+			img.step-arrow-img {
+				display: none !important;
+			}
 		}
 	}
 
@@ -2418,12 +2511,20 @@ product start
 	img {
 		width: 100%;
 	}
+
+	@include max-bp(1199px) {
+		margin-top: 20px;
+	}
 }
 
 .product-right__title {
 	font-size: 36px;
 	font-weight: 400;
 	line-height: 40px;
+
+	@include max-bp(767px) {
+		font-size: 30px;
+	}
 
 	b {
 		font-weight: 700;
@@ -2481,9 +2582,33 @@ product start
 	display: flex;
 	align-items: center;
 
+	@include max-bp(1050px) {
+		flex-wrap: wrap;
+	}
+
+	@include max-bp(767px) {
+		flex-wrap: nowrap;
+		max-width: 100%;
+	}
+
+	@include max-bp(600px) {
+		flex-wrap: wrap;
+	}
+
+	@include max-bp(450px) {
+		flex-direction: column;
+		row-gap: 10px;
+	}
+
+
 	.price {
 		display: flex;
 		align-items: flex-end;
+
+		@include max-bp(1050px) {
+			width: 100%;
+			max-width: 50%;
+		}
 
 		h2 {
 			text-align: right;
@@ -2530,10 +2655,47 @@ product start
 		padding: 0 20px;
 		border-left: 1px solid #D9D9D9;
 		border-right: 1px solid #D9D9D9;
+
+		@include max-bp(1050px) {
+			width: 100%;
+			max-width: 50%;
+		}
+
+		@include max-bp(600px) {
+			border-right: 0;
+		}
+
+		@include max-bp(450px) {
+			max-width: 100%;
+		}
+
+		@include max-bp(450px) {
+			border: none;
+			text-align: center;
+		}
 	}
 
 	&:last-child {
 		padding-left: 20px;
+
+		@include max-bp(1050px) {
+			padding-left: 0;
+			margin-top: 20px;
+		}
+
+		@include max-bp(767px) {
+			padding-left: 20px;
+			margin: 0;
+		}
+
+		@include max-bp(600px) {
+			padding: 0;
+			margin-top: 20px;
+		}
+
+		@include max-bp(450px) {
+			margin: 0;
+		}
 	}
 
 	&:first-child {
@@ -2552,6 +2714,18 @@ product start
 		font-weight: 400;
 		line-height: 50px;
 		text-transform: uppercase;
+
+		@include max-bp(1050px) {
+			width: 100%;
+		}
+
+		@include max-bp(767px) {
+			width: 140px;
+		}
+
+		@include max-bp(600px) {
+			width: 100%;
+		}
 	}
 }
 
@@ -2560,6 +2734,10 @@ product start
 	align-items: flex-start;
 	column-gap: 5px;
 	margin-bottom: 90px;
+
+	@include max-bp(767px) {
+		margin-bottom: 30px;
+	}
 }
 
 .table-main {
@@ -2569,10 +2747,14 @@ product start
 }
 
 .table-head {
+	width: 100vh;
+	display: flex;
+	align-items: flex-start;
+	column-gap: 40px;
+
 	h3 {
-		width: 100%;
+		padding: 0 20px;
 		height: 54px;
-		padding: 0px 42.3px 22px 42.48px;
 		flex-shrink: 0;
 		text-align: center;
 		border-bottom: 2px solid #D9D9D9;
@@ -2582,6 +2764,22 @@ product start
 		line-height: 16px;
 		text-transform: uppercase;
 		cursor: pointer;
+
+		&:first-child {
+			width: 264.95px;
+		}
+
+		&:nth-child(2) {
+			width: 295.03px;
+		}
+
+		&:nth-child(3) {
+			width: 208.52px;
+		}
+
+		&:last-child {
+			width: 265.5px;
+		}
 	}
 
 	h3.active {

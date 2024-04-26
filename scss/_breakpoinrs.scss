@@ -153,6 +153,7 @@ p.section-text {
 	display: flex;
 	align-items: center;
 	list-style: none;
+	flex-wrap: wrap;
 	column-gap: 10px;
 
 	li {
@@ -182,6 +183,7 @@ p.section-text {
 	background-image: url('../img/icons/arrow-line.svg');
 	background-size: contain;
 	background-repeat: repeat-x;
+
 	@include max-bp(500px) {
 		margin-top: 25px;
 	}
