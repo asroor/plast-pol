@@ -28,6 +28,68 @@ a.header__logo {
 	list-style: none;
 }
 
+.header__nav {
+	@include max-bp(1100px) {
+		position: fixed;
+		top: 0;
+		right: -100%;
+		opacity: 0;
+		visibility: hidden;
+		width: 100%;
+		max-width: 400px;
+		height: 100%;
+		z-index: 3;
+		background-color: white;
+		padding: 20px;
+		transition: ease .3s;
+	}
+
+	@include max-bp(700px) {
+		max-width: 280px;
+	}
+
+	.header-contact {
+		display: none;
+
+		@include max-bp(450px) {
+			display: flex;
+			margin-top: 20px;
+
+			button {
+				display: none;
+			}
+
+			.header-contact__num {
+				display: block;
+			}
+		}
+	}
+}
+
+.header__nav.active {
+	visibility: visible;
+	right: 0;
+	opacity: 1;
+}
+
+.menu-head {
+	display: none;
+
+	.close-btn {
+		width: 20px;
+		height: 20px;
+		border: none;
+		background-color: transparent;
+	}
+
+	@include max-bp(1100px) {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 20px;
+	}
+}
+
 .nav-link .nav-link__item {
 	display: inline-flex;
 	height: 13px;
@@ -44,6 +106,14 @@ a.header__logo {
 		font-weight: 300;
 		line-height: 13px;
 		text-transform: uppercase;
+	}
+
+	@include max-bp(1100px) {
+		padding: 0;
+
+		&:not(:last-child) {
+			border: none;
+		}
 	}
 }
 
@@ -81,6 +151,35 @@ a.header__logo {
 		font-weight: 400;
 		line-height: 28px;
 		text-transform: uppercase;
+
+		@include max-bp(450px) {
+			display: none;
+		}
+	}
+}
+
+.nav-link {
+	@include max-bp(1100px) {
+		display: flex;
+		flex-direction: column;
+		row-gap: 20px;
+	}
+}
+
+.menu-btn {
+	width: 20px;
+	height: 20px;
+	background-color: transparent;
+	border: none;
+	display: none;
+	margin-left: 20px;
+
+	@include max-bp(1100px) {
+		display: flex;
+	}
+
+	@include max-bp(450px) {
+		margin-left: 0;
 	}
 }
 
@@ -1031,6 +1130,11 @@ footer {
 	padding-bottom: 60px;
 	border-bottom: 1px dashed #D8DBE0;
 
+	@include max-bp(1050px) {
+		flex-wrap: wrap;
+		row-gap: 20px;
+	}
+
 	.series-item {
 		width: calc(100% / 3);
 		display: flex;
@@ -1051,6 +1155,14 @@ footer {
 		&:not(:first-child) {
 			border-left: 1px solid rgba(217, 217, 217, 0.60);
 			padding-left: 40px;
+
+			@include max-bp(650px) {
+				padding-left: 20px;
+			}
+		}
+
+		@include max-bp(650px) {
+			padding-right: 20px;
 		}
 
 		h3,
@@ -1066,6 +1178,14 @@ footer {
 		h3 {
 			font-weight: 700;
 		}
+
+		@include max-bp(1050px) {
+			width: calc(100% / 2);
+		}
+
+		@include max-bp(560px) {
+			width: 100%;
+		}
 	}
 }
 
@@ -1074,6 +1194,11 @@ footer {
 	align-items: center;
 	justify-content: space-between;
 	padding-top: 50px;
+
+	@include max-bp(1050px) {
+		flex-direction: column;
+		row-gap: 15px;
+	}
 
 	h5 {
 		color: #FFF;
@@ -1091,6 +1216,16 @@ footer {
 		align-items: center;
 		column-gap: 40px;
 		margin-bottom: 5px;
+
+		@include max-bp(1050px) {
+			column-gap: 20px;
+			justify-content: center;
+		}
+
+		@include max-bp(530px) {
+			flex-direction: column;
+			row-gap: 5px;
+		}
 	}
 
 	a,
@@ -1124,9 +1259,13 @@ About page
 
 #about {
 	padding: 50px 0;
-	background: url(../img/about-bg.svg) no-repeat, url(../img/def-bg.png) no-repeat;
-	background-size: contain, contain;
-	background-position: 0 109%, top;
+	background-image: url('../img/bg-default.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	@include max-bp(1050px) {
+		background-size: contain;
+	}
 }
 
 .about-title {
@@ -1137,6 +1276,13 @@ About page
 .about-series {
 	margin-top: 70px;
 	margin-bottom: 100px;
+
+	@include max-bp(550px) {
+		.row>* {
+			width: 100%;
+			margin-top: 30px;
+		}
+	}
 }
 
 .about-item {
@@ -1181,6 +1327,10 @@ About page
 }
 
 .cases-title__series {
+	@include max-bp(768px) {
+		padding-left: 20px;
+	}
+
 	li:not(:last-child) {
 		margin-bottom: 10px;
 	}
@@ -1203,6 +1353,21 @@ About page
 		align-items: flex-start;
 		justify-content: space-between;
 
+		@include max-bp(1199px) {
+			column-gap: 20px;
+		}
+
+		@include max-bp(991px) {
+			margin-bottom: 20px;
+			align-items: center;
+		}
+
+		@include max-bp(470px) {
+			flex-direction: column;
+			row-gap: 10px;
+			text-align: center;
+		}
+
 		img {
 			border-radius: 70px;
 			border: 2px solid var(--bs-orange);
@@ -1217,6 +1382,10 @@ About page
 			font-weight: 400;
 			line-height: 22px;
 			max-width: 339.25px;
+
+			@include max-bp(991px) {
+				max-width: 100%;
+			}
 		}
 
 		b {
@@ -1240,6 +1409,12 @@ consult start
 }
 
 .consult-cards {
+	@include max-bp(767px) {
+		.row {
+			justify-content: center;
+		}
+	}
+
 	.item {
 		width: 100%;
 
@@ -1257,6 +1432,15 @@ consult start
 			font-family: var(--font---font-SourceSansPro);
 			font-size: 20px;
 			font-weight: 700;
+
+			@include max-bp(870px) {
+				line-height: 150%;
+				font-size: 18px;
+			}
+
+			@include max-bp(767px) {
+				font-size: 20px;
+			}
 		}
 
 		hr {
@@ -1278,6 +1462,15 @@ consult start
 		}
 	}
 
+	@include max-bp(1199px) {
+		margin-bottom: 50px;
+
+		.item {
+			p {
+				max-width: 100%;
+			}
+		}
+	}
 }
 
 .about__contact {
@@ -1310,12 +1503,26 @@ consult start
 		align-items: center;
 		justify-content: space-between;
 		padding: 20px 30px;
+
+		@include max-bp(1050px) {
+			flex-direction: column;
+			align-items: flex-start;
+			row-gap: 25px;
+		}
+
+		@include max-bp(450px) {
+			padding: 20px;
+		}
 	}
 }
 
 
 .card-content__left {
 	max-width: 311px;
+
+	@include max-bp(1050px) {
+		max-width: 100%;
+	}
 
 	h1 {
 		font-size: 22px;
@@ -1337,6 +1544,27 @@ consult start
 	align-items: center;
 	column-gap: 40px;
 
+	@include max-bp(1199px) {
+		column-gap: 15px;
+	}
+
+	@include max-bp(1050px) {
+		width: 100%;
+		column-gap: 0px;
+		justify-content: space-between;
+	}
+
+	@include max-bp(870px) {
+		flex-wrap: wrap;
+		justify-content: center;
+		column-gap: 10px;
+		row-gap: 5px;
+	}
+
+	@include max-bp(500px) {
+		gap: 10px;
+	}
+
 	input {
 		width: 215.69px;
 		padding: 21px;
@@ -1352,6 +1580,20 @@ consult start
 		color: #000;
 		font-size: 14px;
 		font-weight: 400;
+
+		@include max-bp(870px) {
+			width: calc(50% - 5px);
+		}
+
+		@include max-bp(500px) {
+			width: 100%;
+		}
+	}
+
+	img {
+		@include max-bp(870px) {
+			transform: rotate(90deg);
+		}
 	}
 
 	button {
@@ -1366,6 +1608,10 @@ consult start
 		border: none;
 
 		padding: 17.45px 31.99px 17.55px 31.62px;
+
+		@include max-bp(870px) {
+			width: 100%;
+		}
 	}
 
 }
@@ -2027,7 +2273,7 @@ product start
 		margin-bottom: 15px;
 	}
 
-	.product-about{
+	.product-about {
 		list-style: none;
 
 		li {
@@ -2038,7 +2284,8 @@ product start
 			margin-bottom: 10px;
 			display: flex;
 			align-items: center;
-			img{
+
+			img {
 				width: 20px;
 			}
 		}
