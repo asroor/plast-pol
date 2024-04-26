@@ -1896,6 +1896,9 @@ Montages start
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: top center;
+	@include max-bp(1050px) {
+		background-size: contain;
+	}
 }
 
 .aksiya-head {
@@ -1904,6 +1907,12 @@ Montages start
 	justify-content: space-between;
 	margin-bottom: 55px;
 	margin-top: 66px;
+
+	@include max-bp(500px) {
+		img {
+			width: 15px;
+		}
+	}
 
 	ul {
 		list-style: none;
@@ -1916,6 +1925,10 @@ Montages start
 			font-size: 14px;
 			font-weight: 400;
 			line-height: 22px;
+
+			@include max-bp(400px) {
+				font-size: 12px;
+			}
 		}
 
 		li:not(:last-child) {
@@ -1941,6 +1954,12 @@ Montages start
 		letter-spacing: 1.2px;
 		text-transform: uppercase;
 		margin-bottom: 24px;
+
+		@include max-bp(500px) {
+			font-size: 20px;
+			margin-bottom: 15px;
+			line-height: 110%;
+		}
 	}
 
 	.post-img {
@@ -1949,6 +1968,14 @@ Montages start
 
 		img {
 			object-fit: contain;
+
+			@include max-bp(767px) {
+				width: 70%;
+			}
+
+			@include max-bp(500px) {
+				width: 100%;
+			}
 		}
 	}
 
@@ -1974,6 +2001,14 @@ Montages start
 		img {
 			width: 100%;
 			max-width: 150px;
+
+			@include max-bp(767px) {
+				max-width: 50%;
+			}
+
+			@include max-bp(500px) {
+				max-width: 70%;
+			}
 		}
 
 		h2 {
@@ -1989,6 +2024,12 @@ Montages start
 	&:not(:last-child) {
 		margin-bottom: 65px;
 	}
+
+	@include max-bp(767px) {
+		&>.row>*:not(:last-child) {
+			margin-bottom: 25px;
+		}
+	}
 }
 
 .post-item-last {
@@ -2002,6 +2043,10 @@ Montages start
 	ul {
 		margin: 15px 0;
 		padding-left: 50px;
+
+		@include max-bp(600px) {
+			padding-left: 20px;
+		}
 
 		li {
 			color: #FF712C;
@@ -2045,6 +2090,22 @@ Montages start
 	.aksiya__card {
 		img {
 			height: 175px;
+
+			@include max-bp(991px) {
+				height: 150px;
+			}
+
+			@include max-bp(767px) {
+				height: 180px;
+			}
+
+			@include max-bp(500px) {
+				height: 150px;
+			}
+
+			@include max-bp(400px) {
+				height: 200px;
+			}
 		}
 
 		h4 {
@@ -2053,6 +2114,24 @@ Montages start
 			font-weight: 700;
 			margin: 0;
 			margin-top: 15px;
+
+			@include max-bp(1440px) {
+				margin-top: 7px;
+			}
+
+			@include max-bp(991px) {
+				line-height: 110%;
+			}
+
+			@include max-bp(500px) {
+				font-size: 14px;
+			}
+		}
+	}
+
+	@include max-bp(400px) {
+		.row>* {
+			width: 100%;
 		}
 	}
 }
@@ -2074,6 +2153,18 @@ Montages start
 	display: flex;
 	align-items: flex-start;
 	column-gap: 35px;
+
+	@include max-bp(768px) {
+		padding: 20px;
+		column-gap: 20px;
+	}
+
+	@include max-bp(500px) {
+		flex-direction: column;
+		align-items: center;
+		column-gap: 0;
+		row-gap: 20px;
+	}
 }
 
 .avtor__about {
@@ -2081,6 +2172,11 @@ Montages start
 		display: flex;
 		align-items: center;
 		column-gap: 5px;
+
+		@include max-bp(500px) {
+			flex-wrap: wrap;
+			align-items: center;
+		}
 
 		h3,
 		h4 {
@@ -2091,12 +2187,23 @@ Montages start
 			line-height: 30px;
 			letter-spacing: 0.95px;
 			text-transform: uppercase;
+
+			@include max-bp(500px) {
+				font-size: 16px;
+				line-height: 150%;
+			}
+
 		}
 
 		h4 {
 			font-size: 17.664px;
 			font-weight: 400;
 			text-transform: capitalize;
+
+			@include max-bp(500px) {
+				font-size: 16px;
+				line-height: 150%;
+			}
 		}
 	}
 
@@ -2104,6 +2211,10 @@ Montages start
 		margin-top: 20px;
 		display: flex;
 		align-items: center;
+
+		@include max-bp(500px) {
+			margin-top: 10px;
+		}
 
 		span {
 			font-size: 14px;

@@ -189,6 +189,11 @@ p.section-text:not(:last-child) {
   background-size: contain;
   background-repeat: repeat-x;
 }
+@media (max-width: 500px) {
+  .arrow-line {
+    margin-top: 25px;
+  }
+}
 
 .close-bg {
   position: fixed;
@@ -3026,6 +3031,11 @@ Montages start
   background-size: cover;
   background-position: top center;
 }
+@media (max-width: 1050px) {
+  #aksiya {
+    background-size: contain;
+  }
+}
 
 .aksiya-head {
   display: flex;
@@ -3033,6 +3043,11 @@ Montages start
   justify-content: space-between;
   margin-bottom: 55px;
   margin-top: 66px;
+}
+@media (max-width: 500px) {
+  .aksiya-head img {
+    width: 15px;
+  }
 }
 .aksiya-head ul {
   list-style: none;
@@ -3045,6 +3060,12 @@ Montages start
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
+}
+@media (max-width: 400px) {
+  .aksiya-head ul li,
+  .aksiya-head ul li > a:not(.orange-txt) {
+    font-size: 12px;
+  }
 }
 .aksiya-head ul li:not(:last-child) {
   padding-right: 10px;
@@ -3065,12 +3086,29 @@ Montages start
   text-transform: uppercase;
   margin-bottom: 24px;
 }
+@media (max-width: 500px) {
+  .post-item h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    line-height: 110%;
+  }
+}
 .post-item .post-img {
   margin: 15px 0;
   width: 100%;
 }
 .post-item .post-img img {
   object-fit: contain;
+}
+@media (max-width: 767px) {
+  .post-item .post-img img {
+    width: 70%;
+  }
+}
+@media (max-width: 500px) {
+  .post-item .post-img img {
+    width: 100%;
+  }
 }
 .post-item > * > * > *:last-child {
   margin-bottom: 0;
@@ -3091,6 +3129,16 @@ Montages start
   width: 100%;
   max-width: 150px;
 }
+@media (max-width: 767px) {
+  .post-item .post-card img {
+    max-width: 50%;
+  }
+}
+@media (max-width: 500px) {
+  .post-item .post-card img {
+    max-width: 70%;
+  }
+}
 .post-item .post-card h2 {
   margin: 15px 0;
   font-size: 16px;
@@ -3101,6 +3149,11 @@ Montages start
 }
 .post-item:not(:last-child) {
   margin-bottom: 65px;
+}
+@media (max-width: 767px) {
+  .post-item > .row > *:not(:last-child) {
+    margin-bottom: 25px;
+  }
 }
 
 .post-item-last {
@@ -3113,6 +3166,11 @@ Montages start
 .post-item-last ul {
   margin: 15px 0;
   padding-left: 50px;
+}
+@media (max-width: 600px) {
+  .post-item-last ul {
+    padding-left: 20px;
+  }
 }
 .post-item-last ul li {
   color: #FF712C;
@@ -3149,12 +3207,52 @@ Montages start
 .aksiya-cards .aksiya__card img {
   height: 175px;
 }
+@media (max-width: 991px) {
+  .aksiya-cards .aksiya__card img {
+    height: 150px;
+  }
+}
+@media (max-width: 767px) {
+  .aksiya-cards .aksiya__card img {
+    height: 180px;
+  }
+}
+@media (max-width: 500px) {
+  .aksiya-cards .aksiya__card img {
+    height: 150px;
+  }
+}
+@media (max-width: 400px) {
+  .aksiya-cards .aksiya__card img {
+    height: 200px;
+  }
+}
 .aksiya-cards .aksiya__card h4 {
   color: #333;
   font-size: 16px;
   font-weight: 700;
   margin: 0;
   margin-top: 15px;
+}
+@media (max-width: 1440px) {
+  .aksiya-cards .aksiya__card h4 {
+    margin-top: 7px;
+  }
+}
+@media (max-width: 991px) {
+  .aksiya-cards .aksiya__card h4 {
+    line-height: 110%;
+  }
+}
+@media (max-width: 500px) {
+  .aksiya-cards .aksiya__card h4 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 400px) {
+  .aksiya-cards .row > * {
+    width: 100%;
+  }
 }
 
 .networks {
@@ -3174,11 +3272,31 @@ Montages start
   align-items: flex-start;
   column-gap: 35px;
 }
+@media (max-width: 768px) {
+  .avtor {
+    padding: 20px;
+    column-gap: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .avtor {
+    flex-direction: column;
+    align-items: center;
+    column-gap: 0;
+    row-gap: 20px;
+  }
+}
 
 .avtor__about .avtor__about-head {
   display: flex;
   align-items: center;
   column-gap: 5px;
+}
+@media (max-width: 500px) {
+  .avtor__about .avtor__about-head {
+    flex-wrap: wrap;
+    align-items: center;
+  }
 }
 .avtor__about .avtor__about-head h3,
 .avtor__about .avtor__about-head h4 {
@@ -3190,15 +3308,33 @@ Montages start
   letter-spacing: 0.95px;
   text-transform: uppercase;
 }
+@media (max-width: 500px) {
+  .avtor__about .avtor__about-head h3,
+  .avtor__about .avtor__about-head h4 {
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
 .avtor__about .avtor__about-head h4 {
   font-size: 17.664px;
   font-weight: 400;
   text-transform: capitalize;
 }
+@media (max-width: 500px) {
+  .avtor__about .avtor__about-head h4 {
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
 .avtor__about h5 {
   margin-top: 20px;
   display: flex;
   align-items: center;
+}
+@media (max-width: 500px) {
+  .avtor__about h5 {
+    margin-top: 10px;
+  }
 }
 .avtor__about h5 span {
   font-size: 14px;

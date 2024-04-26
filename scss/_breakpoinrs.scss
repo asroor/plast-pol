@@ -182,6 +182,9 @@ p.section-text {
 	background-image: url('../img/icons/arrow-line.svg');
 	background-size: contain;
 	background-repeat: repeat-x;
+	@include max-bp(500px) {
+		margin-top: 25px;
+	}
 }
 
 .close-bg {
