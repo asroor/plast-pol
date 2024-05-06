@@ -1,0 +1,107 @@
+@media (max-width: 1199px) {
+	.container {
+		max-width: 990px;
+	}
+
+	.home__about {
+		max-width: 100%;
+	}
+
+	.home-about__cards {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.home-about__series {
+		margin-top: 50px;
+	}
+
+	#homeTabs {
+		bottom: 130px;
+	}
+
+	.tabs-menu {
+		justify-content: flex-end;
+	}
+
+	.tabs-wrap {
+		top: 300px;
+		right: 20px;
+	}
+
+	.certificate-cards {
+		gap: 20px;
+	}
+
+	.certificate-cards>div {
+		max-width: calc(20% - 16px);
+	}
+
+	.certificate-cards>div img {
+		height: 100%;
+	}
+
+	.designs-series .designs-series__img {
+		background-position-x: 100%;
+	}
+
+	.cases-cards .cases-card {
+		-moz-column-gap: 20px;
+		column-gap: 20px;
+	}
+
+	.consult-cards {
+		margin-bottom: 50px;
+	}
+
+	.consult-cards .item p {
+		max-width: 100%;
+	}
+
+	.card-content__right {
+		-moz-column-gap: 15px;
+		column-gap: 15px;
+	}
+
+	.montage-card .card-top .card-top__wrap,
+	.montage-card .card-top .card-bottom__wrap,
+	.montage-card .card-bottom .card-top__wrap,
+	.montage-card .card-bottom .card-bottom__wrap {
+		padding: 10px;
+	}
+
+	.scheme-cards {
+		flex-wrap: wrap;
+	}
+
+	.scheme-cards__item {
+		max-width: calc(25% - 38px);
+	}
+
+	.scheme-cards__item .item__top img.step-arrow-img {
+		left: -50px;
+	}
+
+	.scheme-cards__item:nth-child(6) img.step-arrow-img {
+		display: block;
+	}
+
+	.scheme-cards__item:nth-child(5) img.step-arrow-img,
+	.scheme-cards__item:nth-child(9) img.step-arrow-img {
+		display: none;
+	}
+
+	.product-gallery {
+		margin-top: 20px;
+	}
+}
+
+@media (max-width: 770px) {
+	.next {
+		right: -12px;
+	}
+
+	.prev {
+		left: -12px;
+	}
+}

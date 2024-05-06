@@ -12,7 +12,7 @@ const size = require('gulp-size');
 const webp = require('gulp-webp');
 const postcss = require('gulp-postcss');
 const autoprefixer2 = require('autoprefixer');
-
+const purgecss = require('gulp-purgecss')
 const paths = {
 	html: {
 		src: '*.html',
@@ -49,13 +49,11 @@ function css() {
 	return gulp.src(paths.css.src)
 		.pipe(sourceMap.init())
 		.pipe(sass())
-		.pipe(autoprefixer({
-			cascade: false
-		}))
-		.pipe(postcss([autoprefixer2()]))
-		.pipe(cleanCss({
-			level: 2
-		}))
+		// .pipe(autoprefixer({
+		// 	cascade: false
+		// }))
+		.pipe(cleanCss()) // CSS ni minify qilish
+		.pipe(postcss([autoprefixer2()])) // PostCSS bilan ishlash
 		.pipe(rename({
 			basename: 'main',
 			suffix: '.min'
@@ -82,11 +80,18 @@ function js() {
 		}))
 		.pipe(gulp.dest(paths.js.dest))
 }
+gulp.task('purge', () => {
+	return gulp.src('dist/css/*.min.css')
+		.pipe(purgecss({
+			content: [paths.html.src],
+		}))
+		.pipe(gulp.dest(paths.css.dest));
+});
 
 // optimize images and convert to webp format
 function images() {
 	return gulp.src(paths.images.src)
-		.pipe(webp())
+		// .pipe(webp())
 		.pipe(gulp.dest(paths.images.dest))
 		.pipe(size({
 			showFiles: true
@@ -99,11 +104,11 @@ function watch() {
 	gulp.watch(paths.js.src, js);
 	gulp.watch(paths.images.src, images);
 }
-const build = gulp.series(gulp.parallel(css, js, html, images), watch)
+const build = gulp.series(gulp.parallel(css, js, html, images), watch);
 
 exports.css = css;
 exports.js = js;
 exports.html = html;
 exports.images = images;
-exports.build;
+exports.build = build;
 exports.default = build
