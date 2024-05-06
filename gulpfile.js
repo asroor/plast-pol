@@ -91,13 +91,9 @@ gulp.task('purge', () => {
 // optimize images and convert to webp format
 function images() {
 	return gulp.src(paths.images.src)
-		// .pipe(webp())
-		.pipe(gulp.dest(paths.images.dest))
-		.pipe(size({
-			showFiles: true
-		}));
+		.pipe(webp())
+		.pipe(gulp.dest(paths.images.dest));
 }
-// watch tasks
 function watch() {
 	gulp.watch(paths.css.src, css);
 	gulp.watch(paths.html.src, html);
